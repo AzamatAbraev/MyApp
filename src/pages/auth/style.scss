@@ -1,0 +1,26 @@
+.login-page {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .login-form {
+    width: 100%;
+
+    .login-form-button {
+      background-color: #1890ff;
+      color: #fff;
+      &:hover {
+        background-color: #40a9ff;
+      }
+    }
+  }
+}

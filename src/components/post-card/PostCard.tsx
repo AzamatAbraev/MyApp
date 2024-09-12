@@ -1,6 +1,5 @@
 import { DislikeOutlined, EyeOutlined, LikeOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Space, Tag } from 'antd';
-import React from 'react';
 import './PostCard.scss';
 
 interface PostProps {
@@ -16,7 +15,7 @@ interface PostProps {
   userId: number;
 }
 
-const PostCard: React.FC<PostProps> = (post: PostProps) => {
+const PostCard = (post: PostProps) => {
   const { title, body, tags, reactions, views } = post;
   return (
     <Card className="post-card" bordered={false} hoverable>

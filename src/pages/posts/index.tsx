@@ -6,6 +6,8 @@ import { useGetFilteredPostsQuery } from "../../state/postSlice";
 import { SearchOutlined } from "@ant-design/icons";
 import { Option } from "antd/es/mentions";
 
+import ErrorPage from "../../components/error/ErrorPage";
+import LoadingPage from "../../components/loading/Loading";
 import Post from "../../types/post";
 import "./style.scss";
 
@@ -43,8 +45,8 @@ const PostPage = () => {
     setLimit(pageSize);
   };
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error occurred</p>;
+  if (isLoading) return <LoadingPage />;
+  if (error) return <ErrorPage />;
 
   return (
     <section>

@@ -1,5 +1,7 @@
 import { Button, Card, Col, Image, List, Rate, Row, Tag } from 'antd';
 import { Link, useParams } from 'react-router-dom';
+import ErrorPage from '../../components/error/ErrorPage';
+import LoadingPage from '../../components/loading/Loading';
 import { useGetSingleProductQuery } from '../../state/productSlice';
 import { Review } from '../../types/product';
 import './DetailedProduct.scss';
@@ -7,10 +9,10 @@ import './DetailedProduct.scss';
 const ProductDetailPage = () => {
   const { productId } = useParams();
 
-  const { data: product, isLoading } = useGetSingleProductQuery(productId);
+  const { data: product, isLoading, error } = useGetSingleProductQuery(productId);
 
-  if (isLoading) return <p>Loading...</p>
-
+  if (isLoading) return <LoadingPage />;
+  if (error) return <ErrorPage />;
 
   return (
     <div className="container product-detail-container">

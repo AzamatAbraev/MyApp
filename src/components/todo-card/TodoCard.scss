@@ -1,0 +1,67 @@
+.todo-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 16px;
+  }
+
+  .todo-card__header {
+    margin-bottom: 20px;
+
+    .todo-checkbox {
+      font-size: 18px;
+      color: #1c1c1c;
+
+      .todo-text {
+        margin-left: 10px;
+        font-weight: 500;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: #52c41a;
+      }
+    }
+  }
+
+  .todo-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .todo-user {
+      font-size: 14px;
+      color: #595959;
+    }
+
+    .todo-status {
+      font-size: 24px;
+    }
+
+    .todo-completed {
+      color: #52c41a;
+    }
+
+    .todo-pending {
+      color: #f5222d;
+    }
+
+    .details-button {
+      background-color: #1890ff;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0 15px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #40a9ff;
+      }
+    }
+  }
+}

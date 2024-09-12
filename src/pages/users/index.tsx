@@ -1,8 +1,9 @@
+import DevelopmentPage from "../../components/under-development/DevelopmentPage"
 import "./style.scss"
 
 const UsersPage = () => {
   return (
-    <div>UsersPage</div>
+    <DevelopmentPage />
   )
 }
 

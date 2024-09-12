@@ -110,21 +110,20 @@
 }
 
 @media (max-width: 480px) {
-  // padding: 10px 5px; // Reduce padding for smaller screens
 
   .search-form {
     .search-input {
-      padding: 5px; // Adjust padding for smaller screens
+      padding: 5px;
     }
 
     .search-button {
-      padding: 0 15px; // Adjust button padding for smaller screens
+      padding: 0 15px;
     }
   }
 
   .sorting {
     .sorting-select {
-      min-width: auto; // Allow selects to be flexible in width on small screens
+      min-width: auto;
     }
   }
 

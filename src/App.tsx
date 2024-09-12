@@ -1,44 +1,32 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Header from "./components/header/Header";
+import LoginPage from "./pages/auth";
 import HomePage from "./pages/home";
 import PostsPage from "./pages/posts";
 import ProductPage from "./pages/products/index";
+import ProductDetailPage from "./pages/products/ProductDetail";
 import TodoPage from "./pages/todos";
 import UsersPage from "./pages/users";
-import ProductDetailPage from "./pages/products/ProductDetail";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-    errorElement: <h1>Page Not Found</h1>
-  },
-  {
-    path: "/posts",
-    element: <PostsPage />,
-  },
-  {
-    path: "/products",
-    element: <ProductPage />,
-  },
-  {
-    path: "/products/:productId",
-    element: <ProductDetailPage />
-  },
-  {
-    path: "/todos",
-    element: <TodoPage />,
-  },
-  {
-    path: "/users",
-    element: <UsersPage />,
-  },
-
-]);
+import NotFoundPage from "./components/not-found/NotFoundPage";
+import DevelopmentPage from "./components/under-development/DevelopmentPage";
 
 function App() {
   return (
-    <RouterProvider router={router} />
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts" element={<PostsPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/:productId" element={<ProductDetailPage />} />
+        <Route path="/todos" element={<TodoPage />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin-dashboard" element={<DevelopmentPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

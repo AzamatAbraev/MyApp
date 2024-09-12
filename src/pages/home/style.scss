@@ -1,0 +1,160 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+
+  .hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .ant-btn-primary {
+    background-color: #fff;
+    color: #1890ff;
+    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #f0f0f0;
+      color: #1890ff;
+    }
+  }
+}
+
+.features-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .feature-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: rgba(149, 157, 165, 0.4) 0px 10px 30px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #6c7289;
+      font-weight: 500;
+    }
+
+    .ant-btn-link {
+      color: #1890ff;
+      font-size: 14px;
+      font-weight: 700;
+      padding-left: 0;
+    }
+  }
+}
+
+// Call-to-Action Section
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5222d, #fa541c);
+  color: white;
+  text-align: center;
+
+  .cta-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  .ant-btn-primary {
+    background-color: #fff;
+    color: #f5222d;
+    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #f0f0f0;
+      color: #f5222d;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .cta-title {
+    font-size: 24px;
+  }
+  
+  .features-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+
+  .cta-title {
+    font-size: 20px;
+  }
+}
