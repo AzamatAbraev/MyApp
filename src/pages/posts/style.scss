@@ -1,0 +1,131 @@
+.post__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.posts-container {
+  padding-bottom: 30px;
+}
+
+.posts-title {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: #1c232b;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+
+  @media (max-width: 650px) {
+    font-size: 25px;
+  }
+}
+
+.post-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.post-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .search-form {
+    display: flex;
+    align-items: center;
+
+    .search-input {
+      width: 250px;
+      border-radius: 8px;
+      border: 1px solid #d9d9d9;
+      padding: 5px 10px;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #40a9ff;
+      }
+    }
+
+    .search-button {
+      margin-left: 10px;
+      border-radius: 8px;
+      padding: 0 20px;
+      background-color: #1890ff;
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #40a9ff;
+      }
+    }
+  }
+
+  .sorting {
+    display: flex;
+    align-items: center;
+
+    .sorting-label {
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    .sorting-select {
+      margin-left: 10px;
+      min-width: 150px;
+      border-radius: 8px;
+
+      .ant-select-selector {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .post-control {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-form {
+    .search-input {
+      padding: 5px;
+    }
+
+    .search-button {
+      padding: 0 15px;
+    }
+  }
+
+  .sorting {
+    .sorting-select {
+      min-width: auto;
+    }
+  }
+
+  .sorting-label {
+    display: none;
+  }
+}

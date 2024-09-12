@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+.product-card {
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-family: "Fraunces", serif;
+  border-radius: 10px;
+
+  &__image {
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  &__category {
+    color: #6c7289;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 5px;
+  }
+
+  &__title {
+    color: #1c232b;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  &__description {
+    color: #6c7289;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__availability {
+    color: #1c232b;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    p {
+      color: #3d8168;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-card {
+    padding: 16px;
+
+    &__content {
+      padding: 32px;
+      gap: 20px;
+    }
+
+    &__category {
+      font-size: 13px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    &__description {
+      font-size: 15px;
+    }
+
+    &__availability {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    &__price {
+      gap: 20px;
+
+      p {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 14px;
+
+    &__content {
+      padding: 28px;
+      gap: 18px;
+    }
+
+    &__category {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+
+    &__availability {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &__price {
+      gap: 18px;
+
+      p {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 12px;
+
+    &__image img {
+      height: 300px;
+    }
+
+    &__content {
+      padding: 24px;
+      gap: 16px;
+    }
+
+    &__category {
+      font-size: 11px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+
+    &__availability {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__price {
+      gap: 16px;
+
+      p {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+}
